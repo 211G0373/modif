@@ -218,6 +218,22 @@
         console.log("Intento de salir con botón de retroceso");
         history.pushState(null, "", location.href); // Reagrega el estado para evitar la salida
         });
+
+
+
+        document.addEventListener("click", function (event) {
+      //      if (!minutasContent.contains(event.target) && !minutas.contains(event.target)) {
+        //        minutasContent.classList.remove('active');
+          //      minutas.classList.remove('inactive');
+            //}
+            if (!sidebar.contains(event.target ) && !menu.contains(event.target)) {
+                if (sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+            console.log('click en sidebar');
+
+                }
+            }
+        });
     </script>
 </body>
 </html>

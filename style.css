@@ -247,12 +247,12 @@ table {
         position: fixed;
         top: 10vh;
         left: -100%;
-        width: 70%;
+        width: 40%;
        
     }
     .sidebar.active {
         left: 0;
-        width: 70%;
+        width: 40%;
     }
     main {
         overflow-x: hidden;
