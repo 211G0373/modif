@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: Arial, sans-serif;
+   width: 100%;
+}
+.content{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+header {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+   position: sticky;
+    top: 0;
+
+}
+#titulo{
+    padding-left: 5px;
+    width: 350px;
+    background-color: #1D5371;
+    display: flex;    
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(to right, #1D5371,#185C53);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+#titulo img{
+    width: 6vh;
+    height: 6vh;
+
+    
+}
+#titulo h1{
+    color: white;
+    font-size: 1.5rem;
+}
+#titulo p{
+    color: white;
+    font-size: 0.7rem;
+}
+#seccion{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+#seccion input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+
+}
+
+.menu{
+    background-color: transparent;
+
+   
+    border: none;
+}
+
+/*#1D5371,#185C53*/
+.sidebar {
+    height: 90vh;
+    width: 0;
+    background-color: #11384d;
+    background: linear-gradient(to right, #1D5371,#185C53);
+
+    transition: all 0.5s;
+   
+}
+.sidebar li{
+    list-style: none;
+    padding: 1rem 1rem 1rem 0 ;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: right;
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+.sidebar.active {
+    width: 15%;
+}
+
+main {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+  
+    background-color: blue;
+    
+}
+.minutas-list {
+    
+    width: 400px;
+    min-width: 400px;
+    background-color: white;
+   overflow-y: auto;
+    
+    gap: 2px;
+    padding: 2px;
+}
+.filtros{
+    width: 100%;
+    height: 10%;
+    background-color: #D9D9D9;
+    color: #1D5371;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 5px;
+    border-bottom: 1px solid white;
+}
+.filtros div{
+    border-radius: 5px;
+    overflow: hidden;
+    width: auto;
+    display: flex;
+    gap: 0px;
+}
+.filtros button{
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #bbbbbb;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+.filtros div button{
+    border-radius: 0px;
+}
+.filtros div .active{
+    background-color: #1D5371;
+}
+
+.minuta-content {
+    width: 100%;
+    background-color: #f3f3f3;
+  
+   
+}
+.minuta{
+    width: 100%;
+    height: 10%;
+    background-color: #D9D9D9;
+    color: #1D5371;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 5px;
+    border-bottom: 1px solid white;
+}
+.minuta p{
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 10vh;
+        left: -100%;
+        width: 70%;
+       
+    }
+    .sidebar.active {
+        left: 0;
+        width: 70%;
+    }
+    main {
+        width: 100%;
+    }
+    .minutas-list {
+        min-width: none;
+        width: 100%;
+    }
+    .minuta-content {
+        width: 0%;
+    }
+}
