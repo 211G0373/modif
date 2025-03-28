@@ -227,12 +227,21 @@ table {
     padding: 0 1rem;
     gap: 5px;
     border-bottom: 1px solid white;
+    
+}
+.minuta:hover{
+    background-color: #1D5371;
+    color: white;
+    cursor: pointer;
 }
 .minuta p{
     text-wrap: nowrap;
     overflow: hidden;
 }
-
+.minuta h3{
+    text-wrap: nowrap;
+    overflow: hidden;
+}
 @media screen and (max-width: 768px) {
     .sidebar {
         position: fixed;
@@ -246,16 +255,27 @@ table {
         width: 70%;
     }
     main {
+        overflow-x: hidden;
         width: 100%;
     }
     .minutas-list {
-        min-width: none;
+        transition: all 0.2s;
+        min-width: 100%;
         width: 100%;
+        overflow-x: hidden;
+
     }
+    .minutas-list.inactive {
+        width: 0;
+        min-width: 0;
+    }
+
     .minuta-content {
-        width: 0%;
-        padding: 0;
+        min-width: 100%;
+        width: 100%;
+        padding: 0px;
     }
+    
 }
 
 /*login*/

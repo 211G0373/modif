@@ -177,9 +177,15 @@
         <script>
         const menu = document.querySelector('button');
         const sidebar = document.querySelector('.sidebar');
+
+
+        //Sidebar
         menu.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
+
+
+        //Filtros
         let lasActiveCategory = null;
         const categorias=document.querySelector('.filtros div');
         categorias.addEventListener('click',(e)=>{
@@ -188,6 +194,29 @@
             }
             lasActiveCategory=e.target;
             e.target.classList.toggle('active');
+        });
+
+        //CambioEnMovilDeminuta
+        const minutas=document.querySelector('.minutas-list');
+        const minutasContent=document.querySelector('.minuta-content');
+
+        minutas.addEventListener('click',(e)=>{
+            if(!e.target.classList.contains('filtros')){
+                minutasContent.classList.toggle('active');
+                console.log('click en minuta');
+                minutas.classList.toggle('inactive');
+            }
+        });
+
+
+       
+
+        history.pushState(null, "", location.href);
+
+        window.addEventListener("popstate", function () {
+            minutas.classList.toggle('inactive');
+        console.log("Intento de salir con botón de retroceso");
+        history.pushState(null, "", location.href); // Reagrega el estado para evitar la salida
         });
     </script>
 </body>
