@@ -7,7 +7,8 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    background-color: #f3f3f3;
+  /*  background: linear-gradient(to right, #1D5371,#185C53);*/
 }
 body {
     font-family: Arial, sans-serif;
@@ -22,6 +23,7 @@ header {
     width: 100%;
     height: 10vh;
 
+    background-color: white;
     display: flex;
     justify-content: space-between;
    position: sticky;
@@ -58,7 +60,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
 }
 #seccion input{
     width: 100%;
@@ -107,7 +108,6 @@ main {
     height: 90vh;
     width: 100%;
   
-    background-color: blue;
     
 }
 .minutas-list {
@@ -155,12 +155,66 @@ main {
     background-color: #1D5371;
 }
 
+
+
+
+
+
 .minuta-content {
-    width: 100%;
-    background-color: #f3f3f3;
-  
-   
+    width: 60%;
+    background-color: white;
+    
+    padding: 20px 30px;
+    text-align: justify;
+
+    
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
+.minuta-content h1{
+    padding: 20px;
+    text-align: center;
+    border-bottom: #11384d 1px solid;
+    border-top: #11384d 1px solid;
+
+    color: #222;
+}
+.minuta-content b{
+    margin-right: 15px;
+}
+.minuta-content div{
+    padding: 30px;
+}
+.minuta-content ul{
+    margin-left: 40px;
+}
+
+/*tabla*/
+table {
+    background-color: #D9D9D9;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px auto;
+    font-size: 13px;
+    text-align: center;
+}
+
+    table th {
+        background-color: #CDCBCB;
+        color: #164057;
+    }
+
+    table tr {
+        height: 40px;
+    }
+
+
+
+
 .minuta{
     width: 100%;
     height: 10%;
@@ -200,4 +254,38 @@ main {
     .minuta-content {
         width: 0%;
     }
+}
+
+/*login*/
+#login{
+    background-color: #ACCBCC;
+    width: 25%;
+    height: 60vh;
+    margin: 160px auto;
+    color: #185C53;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 1px 2px 10px 0px #0f3833;
+}
+#login h2{
+    margin-top: 20px;
+}
+#login img{
+    height: 170px;
+}
+#login input{
+    margin: 20px;
+    width: 50%;
+    height: auto;
+    margin-top: 45px;
+}
+input{
+    height: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px 0px #b2b4b5;
 }
