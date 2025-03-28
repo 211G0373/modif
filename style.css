@@ -254,6 +254,7 @@ table {
     }
     .minuta-content {
         width: 0%;
+        padding: 0;
     }
 }
 
