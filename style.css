@@ -73,6 +73,8 @@ header {
 
 }
 
+
+
 .menu{
     background-color: transparent;
 
@@ -323,38 +325,38 @@ table {
 
 /*login*/
 #login{
-    background-color: #ACCBCC;
-    width: 25%;
-    height: 60vh;
-    margin: 160px auto;
-    color: #185C53;
-    font-weight: bold;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 1px 2px 10px 0px #0f3833;
+    background-color: #185C53;
+    width: 40%;
+    height: 70vh;
+    display: flex;
+gap: 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#login form{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 #login label{
     padding-left: 0;
 }
 #login h2{
-    margin-top: 20px;
+    
 }
 #login img{
-    height: 170px;
+    width: 20vh;
 }
 #login input{
-    margin: 20px;
-    width: 40%;
-    margin-top: 45px;
+  
 }
 input,select{
-    height: 30px;
-    border-radius: 5px;
-    border: 0;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 1px 2px 10px 0px #b2b4b5;
+
 }
 
  /*departamentos*/
