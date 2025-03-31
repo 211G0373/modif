@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlock Base</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <button class="menu">
+               <img id="imgMenu" src="588a64e0d06f6719692a2d10.png" alt="" srcset="">
+            </button> 
+            <img src="logotec (weld).png">
+            <div> <h1>MINUTAS</h1>
+            <p>Luis Carlos Esteban Longares Vidal</p>
+            </div>
+        </div>
+        <div id="seccion">
+            <input type="search" placeholder="&#x1F50E; Buscar...">
+        </div>
+    </header>
+    <div class="content">
+        <aside class="sidebar"> 
+            <ul>
+                <a href="index.html"><li>Minutas</li></a>
+                <a href="Empleados.html"><li>Empleados</li></a>
+                <a href="departamento.html"><li>Departamentos</li></a>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+            </ul>
+      
+        </aside>
+       <main>
+        <table id="tablaEmplea">
+            <tr>
+                <th>Núm. Empleado</th>
+                <th>Nombre</th>
+                <th>Departamento</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+            <tr>
+                <td>4455</td>
+                <td>Juan Torres Méndez</td>
+                <td>Administración</td>
+                <td class="eliminarEmp">🗑</td>
+                <td class="editarEmp">🖉</td>
+            </tr>
+        </table>
+
+        <!--Eliminar empleado-->
+        <div id="modalEliminarEmpleado" class="modal">
+            <div>
+                <label>¿Desea eliminar a este empleado?</label><br>
+                <input class="hover" type="button" value="Si">
+                <input class="hover" type="button" value="No">
+            </div>
+        </div>
+
+        <!--Dar de alta empleado-->
+        <div id="modalCrearEmpleado" class="modal">
+            <form>
+                <h3>Dar de alta empleado</h3>
+                <label>Nombre completo:</label>
+                <input type="text" placeholder="Escribir..."><br>
+                <label>Correo electronico:</label>
+                <input type="text" placeholder="Escribir..."><br>
+                <label>Departamento:</label>
+                <select>
+                    <option>Sistemas</option>
+                    <option>Vinculación</option>
+                    <option>Planeación</option>
+                    <option>Administración</option>
+                    <option>Industrial</option>
+                    <option>Coordinación</option>
+                </select><br>
+                <label>Número de empleado:</label>
+                <input type="number" placeholder="Escribir..."><br>
+                <label>Contraseña:</label>
+                <input type="password" placeholder="Escribir..."><br>
+                <label>Fecha de Nacimiento</label>
+                <input type="date"><br>
+                <a href="adminEmpleados.html"><input class="hover" type="button" value="Cancelar"></a>
+                <a href="adminEmpleados.html"><input class="hover" type="button" value="Confirmar"></a>
+            </form>
+        </div>
+        <div id="modalEditarEmpleado" class="modal">
+            <form>
+                <h3>Editar empleado</h3>
+                <label>Nombre completo:</label>
+                <input type="text" placeholder="Escribir..."><br>
+                <label>Correo electronico:</label>
+                <input disabled type="text" placeholder="Escribir..."><br>
+                <label>Departamento:</label>
+                <select>
+                    <option>Sistemas</option>
+                    <option>Vinculación</option>
+                    <option>Planeación</option>
+                    <option>Administración</option>
+                    <option>Industrial</option>
+                    <option>Coordinación</option>
+                </select><br>
+                <label>Número de empleado:</label>
+                <input disabled type="number" placeholder="Escribir..."><br>
+                <label>Contraseña</label>
+                <input type="password" placeholder="Escribir..."><br>
+                <label>Fecha de Nacimiento</label>
+                <input type="date"><br>
+                <a href="adminEmpleados.html"><input class="hover" type="button" value="Cancelar"></a>
+                <a href="adminEmpleados.html"><input class="hover" type="button" value="Confirmar"></a>
+            </form>
+        </div>
+       </main>
+    
+    </div>
+        <script>
+        const menu = document.querySelector('button');
+        const sidebar = document.querySelector('.sidebar');
+
+
+        //Sidebar
+        menu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+
+        //Filtros
+        let lasActiveCategory = null;
+        const categorias=document.querySelector('.filtros div');
+        categorias.addEventListener('click',(e)=>{
+            if(lasActiveCategory){
+                lasActiveCategory.classList.remove('active');
+            }
+            lasActiveCategory=e.target;
+            e.target.classList.toggle('active');
+        });
+
+        //CambioEnMovilDeminuta
+        const minutas=document.querySelector('.minutas-list');
+        const minutasContent=document.querySelector('.minuta-content');
+
+        minutas.addEventListener('click',(e)=>{
+            if(!e.target.classList.contains('filtros')){
+                minutasContent.classList.toggle('active');
+                console.log('click en minuta');
+                minutas.classList.toggle('inactive');
+            }
+        });
+
+
+       
+
+        history.pushState(null, "", location.href);
+
+        window.addEventListener("popstate", function () {
+            minutas.classList.toggle('inactive');
+        console.log("Intento de salir con botón de retroceso");
+        history.pushState(null, "", location.href); // Reagrega el estado para evitar la salida
+        });
+
+
+
+        document.addEventListener("click", function (event) {
+      //      if (!minutasContent.contains(event.target) && !minutas.contains(event.target)) {
+        //        minutasContent.classList.remove('active');
+          //      minutas.classList.remove('inactive');
+            //}
+            if (!sidebar.contains(event.target ) && !menu.contains(event.target)) {
+                if (sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+            console.log('click en sidebar');
+
+                }
+            }
+        });
+    </script>
+</body>
+</html>

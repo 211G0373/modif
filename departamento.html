@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlock Base</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <button class="menu">
+               <img id="imgMenu" src="588a64e0d06f6719692a2d10.png" alt="" srcset="">
+            </button> 
+            <img src="logotec (weld).png">
+            <div> <h1>MINUTAS</h1>
+            <p>Luis Carlos Esteban Longares Vidal</p>
+            </div>
+        </div>
+        <div id="seccion">
+            <input type="search" placeholder="&#x1F50E; Buscar...">
+        </div>
+    </header>
+    <div class="content">
+        <aside class="sidebar"> 
+            <ul>
+                <a href="index.html"><li>Minutas</li></a>
+                <a href="Empleados.html"><li>Empleados</li></a>
+                <a href="departamento.html"><li>Departamentos</li></a>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+                <li>Opcion1 ad</li>
+            </ul>
+      
+        </aside>
+        <main>
+            <!-- <a id="depto" href="DarAltaDepto.html">
+                <input class="hover" type="button" value="+">
+            </a>-->
+            <table id="tablaDepto">
+                <tr>
+                    <th>Departamento</th>
+                    <th>Jefe</th>
+                    <th>Departamento Superior</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+                <tr>
+                    <td>Sistemas</td>
+                    <td>Oscar</td>
+                    <td>Planeación</td>
+                    <td class="eliminarDep">🗑</td>
+                    <td class="editarDep">🖉</td>
+                </tr>
+            </table>
+            <!--Eliminar departamento-->
+            <div class="modal" id="modalEliminarDepto">
+                <div>
+                    <label>¿Desea dar una baja lógica a este departamento?</label><br>
+                    <input class="hover" type="button" value="Si">
+                    <input class="hover" type="button" value="No">
+                </div>
+            </div>
+            <!--Crear departamento-->
+            <div class="modal" id="modalCrearDepto">
+                <form>
+                    <h3>Crear Departamento</h3>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Escribir..."><br>
+                    <label>Jefe de Departamento</label>
+                    <select>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                    </select><br>
+                    <label>Departamento Superior</label>
+                    <select>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                    </select><br>
+                    <a href="Departamentos.html"><input class="hover" type="button" value="Confirmar"></a>
+                    <a href="Departamentos.html"><input class="hover" type="button" value="Cancelar"></a>
+                </form>
+            </div>
+            <!--Editar departamento-->
+            <div class="modal" id="modalEditarDepto">
+                <form>
+                    <h3>Editar Departamento</h3>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Escribir..."><br>
+                    <label>Jefe de Departamento</label>
+                    <select>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                    </select><br>
+                    <label>Departamento Superior</label>
+                    <select>
+                        <option>Académicos</option>
+                        <option>Académicos</option>
+                        <option>Académicos</option>
+                        <option>Académicos</option>
+                    </select><br>
+                    <a href="Departamentos.html"><input class="hover" type="button" value="Confirmar"></a>
+                    <a href="Departamentos.html"><input class="hover" type="button" value="Cancelar"></a>
+                </form>
+            </div>
+        </main>
+    
+    </div>
+        <script>
+        const menu = document.querySelector('button');
+        const sidebar = document.querySelector('.sidebar');
+
+
+        //Sidebar
+        menu.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+
+        //Filtros
+        let lasActiveCategory = null;
+        const categorias=document.querySelector('.filtros div');
+        categorias.addEventListener('click',(e)=>{
+            if(lasActiveCategory){
+                lasActiveCategory.classList.remove('active');
+            }
+            lasActiveCategory=e.target;
+            e.target.classList.toggle('active');
+        });
+
+        //CambioEnMovilDeminuta
+        const minutas=document.querySelector('.minutas-list');
+        const minutasContent=document.querySelector('.minuta-content');
+
+        minutas.addEventListener('click',(e)=>{
+            if(!e.target.classList.contains('filtros')){
+                minutasContent.classList.toggle('active');
+                console.log('click en minuta');
+                minutas.classList.toggle('inactive');
+            }
+        });
+
+
+       
+
+        history.pushState(null, "", location.href);
+
+        window.addEventListener("popstate", function () {
+            minutas.classList.toggle('inactive');
+        console.log("Intento de salir con botón de retroceso");
+        history.pushState(null, "", location.href); // Reagrega el estado para evitar la salida
+        });
+
+
+
+        document.addEventListener("click", function (event) {
+      //      if (!minutasContent.contains(event.target) && !minutas.contains(event.target)) {
+        //        minutasContent.classList.remove('active');
+          //      minutas.classList.remove('inactive');
+            //}
+            if (!sidebar.contains(event.target ) && !menu.contains(event.target)) {
+                if (sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+            console.log('click en sidebar');
+
+                }
+            }
+        });
+    </script>
+</body>
+</html>

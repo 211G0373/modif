@@ -56,19 +56,20 @@ header {
     font-size: 0.7rem;
 }
 #seccion{
-    width: 10%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #seccion input{
     width: 100%;
-    height: 100%;
-    color: white;
+    height: 3vh;
     font-size: 1rem;
     border: none;
-    text-align: center;
+    margin-right: 30px;
     background-color: transparent;
+    color: #7E7A7A;
+    
 
 }
 
@@ -168,7 +169,6 @@ main {
     padding: 20px 30px;
     text-align: justify;
 
-    
     font-size: 16px;
     line-height: 1.6;
     color: #333;
@@ -188,7 +188,7 @@ main {
     margin-right: 15px;
 }
 .minuta-content div{
-    padding: 30px;
+    padding: 20px;
 }
 .minuta-content ul{
     margin-left: 40px;
@@ -200,7 +200,7 @@ table {
     width: 100%;
     box-sizing: border-box;
     margin: 30px auto;
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -210,11 +210,14 @@ table {
     }
 
     table tr {
-        height: 40px;
+        height: 20px;
     }
 
-
-
+    table td:nth-child(4), table td:nth-child(5){
+        font-size: 20px;
+        color: #1D5371;
+        cursor: pointer;
+    }
 
 .minuta{
     width: 100%;
@@ -242,6 +245,44 @@ table {
     text-wrap: nowrap;
     overflow: hidden;
 }
+.minuta div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    position: relative;
+}
+.minuta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    position: absolute;
+    pointer-events: none;
+    right: 0;
+}
+/*botones cancelar y confirmar*/
+ input[type="button"] {
+    border-bottom: #1D5371 2px solid;
+    border-radius: 0;
+    width: 25%;
+    padding: 5px;
+    margin: 50px 100px;
+    font-size: 15px;
+    height: 30px;
+}
+/*clase hover para botones*/
+.hover:hover{
+    background-color: #164057;
+    color: white;
+    transition: .5s ease-out;
+}
+/* Mostrar el ícono activo */
+.minuta a.activo {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
 @media screen and (max-width: 768px) {
     .sidebar {
         position: fixed;
@@ -274,7 +315,9 @@ table {
         min-width: 100%;
         width: 100%;
         padding: 0px;
+        margin-top: 2px0px;
     }
+
     
 }
 
@@ -303,11 +346,120 @@ table {
     height: auto;
     margin-top: 45px;
 }
-input{
-    height: 10px;
+input,select{
+    height: 30px;
     border-radius: 5px;
     border: 0;
     padding: 10px;
     cursor: pointer;
     box-shadow: 1px 2px 10px 0px #b2b4b5;
+}
+
+ /*departamentos*/
+ #tablaDepto, #tablaEmplea{
+    width: 80%;
+}
+
+/*fondo modal*/
+.modal{
+    width: 100%;
+    left: auto;
+    position: fixed;
+    height: calc(100vh - 50px);
+    background-color: rgba(135, 133, 133, 0.516);
+}
+/*modales, div para eliminar*/
+.modal form, .modal div{
+    width: 50%;
+    height:auto;
+    margin: 50px auto;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+}
+/*Empleado*/
+#modalCrearEmpleado{
+    display: none;
+}
+#modalEditarEmpleado{
+    display: none;
+}
+#modalEliminarEmpleado{
+    display: none;  
+}
+/*Departamento*/
+#modalCrearDepto{
+    display: none;
+}
+#modalEditarDepto{
+    display: none;
+}
+#modalEliminarDepto{
+    display: none;
+}
+/*eliminar empleado*/
+#modalEliminarEmpleado div, #modalEliminarDepto div{
+    height: auto;
+    margin: 150px auto;
+    text-align: center;
+    padding-top: 40px;
+}
+#modalEliminarEmpleado input, #modalEliminarDepto input{
+    margin: 50px 20px;
+    width: 20%;
+    height: 35px;
+    border: #185C53 1px solid;
+}
+
+/*titulo en los modales*/
+form h3{
+    color: white;
+    padding: 40px;
+    background: linear-gradient(to right, #1D5371,#185C53);
+}
+form label{
+    padding-left: 110px;
+}
+/*departamento*/
+#modalCrearDepto input[type="text"], #modalEditarDepto input[type="text"]{
+    border: 0;
+    margin: 20px;
+    width: 65%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+#modalCrearDepto select, #modalEditarDepto select{
+    border: 1px solid #ced0d0;
+    margin: 20px 70px;
+    width: 45%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+/*empleado*/
+#modalCrearEmpleado input[type="text"], #modalEditarEmpleado input[type="text"]{
+    margin: 20px 40px;
+    padding: 0 10px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="password"], #modalCrearEmpleado input[type="password"]{
+    padding: 0 10px;
+    margin: 30px 95px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="number"], #modalCrearEmpleado input[type="number"]{
+    padding: 0 10px;
+    margin: 30px 10px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="date"], #modalCrearEmpleado input[type="date"]{
+    padding: 0 10px;
+    margin: 30px 25px;
+    width: 50%;
+}
+#modalEditarEmpleado select, #modalCrearEmpleado select{
+    border: 0;
+    margin: 20px 70px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 0 10px;
 }
