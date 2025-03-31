@@ -86,7 +86,7 @@ header {
     width: 0;
     background-color: #11384d;
     background: linear-gradient(to right, #1D5371,#185C53);
-    overflow: hidden;
+
     transition: all 0.5s;
    
 }
