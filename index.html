@@ -32,16 +32,14 @@
                 <a href="index.html"><li>Minutas</li></a>
                 <a href="Empleados.html"><li>Empleados</li></a>
                 <a href="departamento.html"><li>Departamentos</li></a>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
+              
 
             </ul>
       
         </aside>
         <main>
-            <div class="minutas-list inactive">
+            <input type="button"  class="float-btn hover" value="Crear minuta">
+            <div class="minutas-list">
                 <div class="filtros">
                     <div>
                         <button id="minutas-pendientes">Pendientes</button>
@@ -52,12 +50,23 @@
                     
 
                         <button>Filter</button>
+
+                        
+                       
                                       
 
 
 
                 </div>
-
+                <div class="filltar modal2">
+                    <form>
+                        <label for="filtro1">Filtro 1</label>
+                        <input type="text" id="filtro1" name="filtro1"><br><br>
+                        <label for="filtro2">Filtro 2</label>
+                        <input type="text" id="filtro2" name="filtro2"><br><br>
+                        <input type="submit" value="Aplicar Filtros">
+                    </form>
+                </div>
 
                 <div class="minuta">
                     <h3>DDSC-0231</h3>
@@ -65,7 +74,7 @@
                         <p> Por medio edlPor medio edlPor medio edl...</p>
                         <a><i class="material-icons">draw</i></a>
                         <a><i class="material-icons">delete</i></a>
-                        <a href="editarMinuta.html"><i class="material-icons">edit</i></a> 
+                        <a><i class="material-icons">edit</i></a> 
                     </div>
                     
                 </div>
@@ -258,10 +267,15 @@
                                 <tr></tr>
                             </td>
                         </table>
+
+
+                        <div class="buttons">
+                            <input type="button" class="hover" value="Cancelar">
+                            <input type="button" class="hover" value="Firmar">
+                        </div>
             
 
-                        <input type="button" class="hover" value="Cancelar">
-                        <input type="button" class="hover" value="Firmar">
+                        
                     </div>
             </div>
             
@@ -295,9 +309,10 @@
         const minutasContent=document.querySelector('.minuta-content');
 
         minutas.addEventListener('click',(e)=>{
-            if(!e.target.classList.contains('filtros')){
+            if(!e.target.classList.contains('filtros') && !e.target.parentElement.parentElement.classList.contains('filtros')  && !e.target.parentElement.classList.contains('filtros')){
+                
                 minutasContent.classList.toggle('active');
-                console.log('click en minuta');
+                console.log(e.target.parentElement.classList.contains('filtros'));
                 minutas.classList.toggle('inactive');
             }
         });

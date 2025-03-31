@@ -29,10 +29,7 @@
                 <a href="index.html"><li>Minutas</li></a>
                 <a href="Empleados.html"><li>Empleados</li></a>
                 <a href="departamento.html"><li>Departamentos</li></a>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
+                
             </ul>
       
         </aside>
@@ -112,11 +109,11 @@
 
         <!--Eliminar empleado-->
         <div id="modalEliminarEmpleado" class="modal">
-            <div>
+            <form>
                 <label>¿Desea eliminar a este empleado?</label><br>
                 <input class="hover" type="button" value="Si">
                 <input class="hover" type="button" value="No">
-            </div>
+            </form>
         </div>
 
         <!--Dar de alta empleado-->
@@ -138,12 +135,14 @@
                 </select><br>
                 <label>Número de empleado:</label>
                 <input type="number" placeholder="Escribir..."><br>
-                <label>Contraseña:</label>
-                <input type="password" placeholder="Escribir..."><br>
+               
                 <label>Fecha de Nacimiento</label>
                 <input type="date"><br>
-                <a href="adminEmpleados.html"><input class="hover" type="button" value="Cancelar"></a>
-                <a href="adminEmpleados.html"><input class="hover" type="button" value="Confirmar"></a>
+                <div class="buttons">
+                                    <input class="hover" type="button" value="Cancelar">
+               <input class="hover" type="button" value="Confirmar">
+            </div>
+
             </form>
         </div>
         <div id="modalEditarEmpleado" class="modal">
@@ -168,8 +167,10 @@
                 <input type="password" placeholder="Escribir..."><br>
                 <label>Fecha de Nacimiento</label>
                 <input type="date"><br>
-                <a href="adminEmpleados.html"><input class="hover" type="button" value="Cancelar"></a>
-                <a href="adminEmpleados.html"><input class="hover" type="button" value="Confirmar"></a>
+                <div class="buttons">
+                <input class="hover" type="button" value="Cancelar">
+                <input class="hover" type="button" value="Confirmar">
+                </div>
             </form>
         </div>
        </main>

@@ -28,14 +28,36 @@
                 <a href="index.html"><li>Minutas</li></a>
                 <a href="Empleados.html"><li>Empleados</li></a>
                 <a href="departamento.html"><li>Departamentos</li></a>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
-                <li>Opcion1 ad</li>
+             
             </ul>
       
         </aside>
         <main>
+            <div class="modal" id="modalCrearDepto">
+                <form>
+                    <h3>Crear Departamento</h3>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Escribir..."><br>
+                    <label>Jefe de Departamento</label>
+                    <select>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                        <option>Oscar</option>
+                    </select><br>
+                    <label>Departamento Superior</label>
+                    <select>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                        <option>Academicos</option>
+                    </select><br>
+                    <div class="buttons">
+                        <input class="hover" type="button" value="Confirmar">
+                        <input class="hover" type="button" value="Cancelar">
+                    </div>  </form>
+            </div>
             <!-- <a id="depto" href="DarAltaDepto.html">
                 <input class="hover" type="button" value="+">
             </a>-->
@@ -155,30 +177,7 @@
                 </div>
             </div>
             <!--Crear departamento-->
-            <div class="modal" id="modalCrearDepto">
-                <form>
-                    <h3>Crear Departamento</h3>
-                    <label>Nombre</label>
-                    <input type="text" placeholder="Escribir..."><br>
-                    <label>Jefe de Departamento</label>
-                    <select>
-                        <option>Oscar</option>
-                        <option>Oscar</option>
-                        <option>Oscar</option>
-                        <option>Oscar</option>
-                        <option>Oscar</option>
-                    </select><br>
-                    <label>Departamento Superior</label>
-                    <select>
-                        <option>Academicos</option>
-                        <option>Academicos</option>
-                        <option>Academicos</option>
-                        <option>Academicos</option>
-                    </select><br>
-                    <a href="Departamentos.html"><input class="hover" type="button" value="Confirmar"></a>
-                    <a href="Departamentos.html"><input class="hover" type="button" value="Cancelar"></a>
-                </form>
-            </div>
+           
             <!--Editar departamento-->
             <div class="modal" id="modalEditarDepto">
                 <form>
@@ -200,8 +199,10 @@
                         <option>Académicos</option>
                         <option>Académicos</option>
                     </select><br>
-                    <a href="Departamentos.html"><input class="hover" type="button" value="Confirmar"></a>
-                    <a href="Departamentos.html"><input class="hover" type="button" value="Cancelar"></a>
+                    <div class="buttons">
+                    <input class="hover" type="button" value="Confirmar">
+                    <input class="hover" type="button" value="Cancelar">
+                </div>
                 </form>
             </div>
         </main>

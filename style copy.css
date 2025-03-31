@@ -379,7 +379,7 @@ input,select{
 }
 /*Empleado*/
 #modalCrearEmpleado{
-    display: none;
+    display: block;
 }
 #modalEditarEmpleado{
     display: none;
