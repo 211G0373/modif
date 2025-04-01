@@ -101,7 +101,11 @@ header {
     width: 100%;
     text-wrap: nowrap;
 }
-
+.sidebar a{
+    
+    overflow: hidden;
+    width: 15vw;
+}
 .sidebar.active {
     width: 15%;
 }
