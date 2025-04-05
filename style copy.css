@@ -272,7 +272,7 @@ table {
     height: 30px;
 }
 /*clase hover para botones*/
-.hover:hover{
+input[type="button"]:hover{
     background-color: #164057;
     color: white;
     transition: .5s ease-out;

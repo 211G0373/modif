@@ -20,7 +20,12 @@
             </div>
         </div>
         <div id="seccion">
-            <input type="search" placeholder="&#x1F50E; Buscar...">
+            <input type="search" placeholder="&#x1F50E;">
+            <div>
+                <a><i class="material-icons">note_add</i></a>
+                <a><i class="material-icons">person_add</i></a>
+                <a><i class="material-icons">group_add</i></a>
+            </div>
         </div>
     </header>
     <div class="content">
@@ -119,28 +124,49 @@
         <!--Dar de alta empleado-->
         <div id="modalCrearEmpleado" class="modal">
             <form>
-                <h3>Dar de alta empleado</h3>
+                <h3>Dar de alta empleados</h3>
+
+                <div>
+                    
                 <label>Nombre completo:</label>
-                <input type="text" placeholder="Escribir..."><br>
-                <label>Correo electronico:</label>
-                <input type="text" placeholder="Escribir..."><br>
-                <label>Departamento:</label>
-                <select>
-                    <option>Sistemas</option>
-                    <option>Vinculación</option>
-                    <option>Planeación</option>
-                    <option>Administración</option>
-                    <option>Industrial</option>
-                    <option>Coordinación</option>
-                </select><br>
+                <input type="text" placeholder="Escribir...">
+                </div>
+
+                <div> 
+                    <label>Nombre completo:</label>
+                    <input type="text" placeholder="Escribir...">
+                    </div>
+                <div>
+                    <label>Correo electronico:</label>
+                <input type="text" placeholder="Escribir...">
+                
+                </div>
+                <div>
+                    <label>Departamento:</label>
+                    <select>
+                        <option>Sistemas</option>
+                        <option>Vinculación</option>
+                        <option>Planeación</option>
+                        <option>Administración</option>
+                        <option>Industrial</option>
+                        <option>Coordinación</option>
+                    </select>
+                </div>
+
+              <div>
                 <label>Número de empleado:</label>
-                <input type="number" placeholder="Escribir..."><br>
+                <input type="number" placeholder="Escribir...">
                
-                <label>Fecha de Nacimiento</label>
-                <input type="date"><br>
+              </div>
+
+                <div>
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date">
+                </div>
+               
                 <div class="buttons">
                                     <input class="hover" type="button" value="Cancelar">
-               <input class="hover" type="button" value="Confirmar">
+                                    <input class="hover" type="button" value="Confirmar">
             </div>
 
             </form>
@@ -148,10 +174,11 @@
         <div id="modalEditarEmpleado" class="modal">
             <form>
                 <h3>Editar empleado</h3>
+                <div></div>
                 <label>Nombre completo:</label>
-                <input type="text" placeholder="Escribir..."><br>
+                <input type="text" placeholder="Escribir...">
                 <label>Correo electronico:</label>
-                <input disabled type="text" placeholder="Escribir..."><br>
+                <input disabled type="text" placeholder="Escribir...">
                 <label>Departamento:</label>
                 <select>
                     <option>Sistemas</option>

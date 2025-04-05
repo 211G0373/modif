@@ -18,121 +18,74 @@ body {
     display: flex;
     width: 100%;
     height: 90vh;
-    overflow-y: auto;
 }
 header {
     width: 100%;
     height: 10vh;
-
+ 
     background-color: white;
     display: flex;
     justify-content: space-between;
    position: sticky;
     top: 0;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-    z-index: 100;
-
+ 
 }
 #titulo{
-    transition: all 1s;
     padding-left: 5px;
-    width: 75vw;
+    width: 350px;
     background-color: #1D5371;
     display: flex;    
     align-items: center;
     gap: 5px;
     background: linear-gradient(to right, #1D5371,#185C53);
-    clip-path: polygon(0 0, 100% 0, calc(100% - 10vh) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 #titulo img{
-    width: 5vh;
-    height: 5vh;
+    width: 6vh;
+    height: 6vh;
+ 
+   
 }
-#imgMenu{
-    padding: 1vh;
-}
-
+ 
 #titulo h1{
     color: white;
     font-size: 1.5rem;
 }
 #titulo p{
-    text-wrap: nowrap;
-    overflow: hidden;
     color: white;
     font-size: 0.7rem;
 }
-#titulo div{
-    opacity: 1;
-    transition: all 1s;
-}
 #seccion{
-    transition: all 1s;
+    width: 60%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    gap: 0;
 }
 #seccion input{
-    transition: all 1s;
-    background-color: #185C53;
+    width: 30%;
+    height: 3vh;
+    font-size: 1rem;
     border: none;
-    height: 5vh;
-    border-radius: 0;
-    width: 0px;
-    padding: 0px;
-    border-radius: 5px 0 0 5px ;
-
+    margin-left: 20%;
+    background-color: transparent;
+    color: #7E7A7A;
 }
-
-header.buscar #titulo{
-    
-   width: 25vw;
-}
-
-header.buscar #titulo div{
-    opacity: 0;
-}
-
-header.buscar #seccion{
-    width: 75vw;
-}
-
-header.buscar #seccion input{
- width: 50VW;
-}
-header.buscar #seccion #buscar{
-    transition: all 0s;
-    transition-delay: 0s;
-    border-radius: 0 25% 25% 0;
-}
-#buscar {
-    transition: all 0.1s;
-    transition-delay: 1s;
-    
-}
-
-
 #seccion i{
     background-color: #185C53;
     color: white;
-    width: 5vh;
-    height: 5vh;
-    text-align: center;
-    align-content: center;
-    margin-right: 10px;
-    border-radius: 25%;
+    padding: 10px;
+    border-radius: 25px;
 }
-
 #seccion div{
-
+    margin: 1% 2% 1% 30%;
+ 
 }
-
+ 
 .menu{
     background-color: transparent;
     border: none;
 }
-
+ 
 /*#1D5371,#185C53*/
 .sidebar {
     height: 90vh;
@@ -141,46 +94,36 @@ header.buscar #seccion #buscar{
     background: linear-gradient(to right, #1D5371,#185C53);
     overflow: hidden;
     transition: all 0.5s;
-    z-index: 200;
    
 }
 .sidebar a{
     padding: 1rem;
-    font-weight: bold;
     border-bottom: 1px solid white;
     color: white;
     text-decoration: none;
     width: 100%;
     display: block;
     text-wrap: nowrap;
-    opacity: 0;
-    transition: all 0.5s;
-    text-align: right;
 }
-
+ 
 .sidebar.active {
     width: 15%;
-    
 }
-.sidebar.active a {
-    opacity: 1;
-    transition: all 0.5s;
-}
-
+ 
 main {
     display: flex;
     height: 90vh;
     width: 100%;
-  
-    
+ 
+   
 }
 .minutas-list {
-    
+   
     width: 400px;
     min-width: 400px;
     background-color: white;
    overflow-y: auto;
-    
+   
     gap: 2px;
     padding: 2px;
 }
@@ -218,63 +161,49 @@ main {
 .filtros div .active{
     background-color: #1D5371;
 }
-
-.filtrar{
-    background-color: #bbbbbb;
-    color: white;
-    border: none;
-    padding: 0.5rem 0.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 10;
-    height: 0;
-    transition: all 0.5s;
-    overflow-y: hidden;
-
-}
-
-.filtrar.active{
-    height: 220px;
+ 
+ 
+ 
+.filtrar {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #D9D9D9;
+    color: #1D5371;
+    padding: 0 1rem;
+    gap: 5px;
+    border-bottom: 1px solid white;
 }
 .filtrar form{
-    transition: all 1s;
-   overflow-y: auto;
-
-    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.filtrar.active form{
-    opacity: 1;
-}
-
-#btnfiltros.active{
-    background-color: #185C53;
-}
-
-
-
-
-
-
-
-
-
-
+ 
+ 
 .minuta-content {
     width: 60%;
     background-color: white;
     overflow-y: auto;
-    
+   
     padding: 20px 30px;
     text-align: justify;
-
+ 
     font-size: 16px;
     line-height: 1.6;
     color: #333;
     margin: 20px auto;
+    border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 .minuta-content h1{
+    padding: 20px;
     text-align: center;
+    border-bottom: #11384d 1px solid;
+    border-top: #11384d 1px solid;
  
     color: #222;
 }
@@ -287,7 +216,7 @@ main {
 .minuta-content ul{
     margin-left: 40px;
 }
-
+ 
 /*tabla*/
 table {
     background-color: #D9D9D9;
@@ -297,32 +226,34 @@ table {
     font-size: 15px;
     text-align: center;
 }
-
+ 
     table th {
         background-color: #CDCBCB;
         color: #164057;
     }
-
+ 
     table tr {
         height: 20px;
     }
-
+ 
     table td:nth-child(4), table td:nth-child(5){
         font-size: 20px;
         color: #1D5371;
         cursor: pointer;
     }
-
+ 
 .minuta{
     width: 100%;
+    height: 10%;
     background-color: #D9D9D9;
     color: #1D5371;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 1rem;
     gap: 5px;
     border-bottom: 1px solid white;
-    padding: 10px;    
+   
 }
 .minuta:hover{
     background-color: #1D5371;
@@ -339,8 +270,8 @@ table {
 }
 .minuta div, #seccion div {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
     /*width: 100%; */
     position: relative;
 }
@@ -354,76 +285,149 @@ table {
     right: 0;
 }
 /*botones cancelar y confirmar*/
-
-
-
+ input[type="button"] {
+    border-bottom: #1D5371 2px solid;
+    border-radius: 0;
+    width: 25%;
+    padding: 5px;
+    margin: 50px 100px;
+    font-size: 15px;
+    height: 30px;
+}
+/*clase hover para botones*/
+.hover:hover{
+    background-color: #164057;
+    color: white;
+    transition: .5s ease-out;
+}
 /* Mostrar el ícono activo */
 .minuta a.activo {
     opacity: 1;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
-
-
-
-/* Formularios*/
-
-
+ 
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 10vh;
+        left: -100%;
+        width: 40%;
+       
+    }
+    .sidebar.active {
+        left: 0;
+        width: 40%;
+    }
+    main {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .minutas-list {
+        transition: all 0.2s;
+        min-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+ 
+    }
+    .minutas-list.inactive {
+        width: 0;
+        min-width: 0;
+    }
+ 
+    .minuta-content {
+        min-width: 100%;
+        width: 100%;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    #login h2{
+        margin-top: 3vh;
+    }
+    #login img{
+        height: 25vh !important;
+    }
+    #login input{
+        width: 12vw !important;
+    }
+    #login{
+        height: 75vh !important;
+        width: 40vw !important;
+        font-size: 11px;
+    }
+    input[type="button"]{
+        height: 5vh !important;
+        font-size: 9px;
+        width: 20vw !important;
+    }
+    #seccion input{
+        width: 11vw;
+        height: 6vh;
+        border-radius: 10px;
+        font-size: 1rem;
+        margin-right: 20%;
+        color: #7E7A7A;
+        box-shadow: none;
+        background-color: #185C53;
+        border: #0f3833 1px solid;
+    }
+}
+ 
+#login{
+    background-color: #ACCBCC;
+    width: 25%;
+    height: 55vh;
+    margin: 10vh auto;
+    color: #185C53;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 1px 2px 10px 0px #0f3833;
+}
+#login label{
+    padding-left: 0;
+}
+#login h2{
+    margin: 3vh;
+}
+#login img{
+    height: 20vh;
+}
+#login input{
+    margin: 2vh;
+    width: 8vw;
+}
+input,select{
+    height: 3vh;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px 0px #b2b4b5;
+}
+ 
  /*departamentos*/
  #tablaDepto, #tablaEmplea{
     width: 80%;
 }
-
+ 
 /*fondo modal*/
 .modal{
     width: 100%;
     left: auto;
     position: fixed;
-    height: 90vh;
+    height: calc(100vh - 50px);
     background-color: rgba(135, 133, 133, 0.516);
-    overflow-y: auto;
 }
 /*modales, div para eliminar*/
-.modal form{
-    width: 80%;
-    height: auto;
+.modal form, .modal div{
+    width: 50%;
+    height:auto;
     margin: 50px auto;
     justify-content: center;
     background-color: white;
     position: relative;
-    display: flex ;
-    flex-wrap: wrap;
-    justify-content: start;
-
 }
-.modal form div{
-    min-width: 300px;
-    width: 30%;
-}
-.modal form div.buttons {
-    max-width: none;
-    min-width: none;
-    width: 80%;
-}
-
-
-
-form input,  form select{
-    background-color: white;
-
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 0px;
-    height: 30px;
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ced0d0;
-    padding: 3px 10px;
-}
-form label{
-    margin: 0px 0px 5px 10%;
-    color: #1D5371;
-}
-
 /*Empleado*/
 #modalCrearEmpleado{
     display: block;
@@ -449,44 +453,81 @@ form label{
     display: none;
 }
 /*eliminar empleado*/
-
-.buttons{
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-
-    margin-left: 10%;
-    margin-top: 20px;
-    padding: 10px;
+#modalEliminarEmpleado div, #modalEliminarDepto div{
+    height: auto;
+    margin: 150px auto;
+    text-align: center;
+    padding-top: 40px;
 }
-
-.buttons input[type="button"]{
-    background-color: #185C53;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: auto 0px;
-    width: 200px;
-    padding: 7px;
+#modalEliminarEmpleado input, #modalEliminarDepto input{
+    margin: 50px 20px;
+    width: 20%;
+    height: 35px;
+    border: #185C53 1px solid;
 }
+ 
 /*titulo en los modales*/
 form h3{
-    text-align: center;
-    padding: 20px 0 20px 0;
-    width: 100%;
     color: white;
-    height: 10vh;
+    padding: 40px;
     background: linear-gradient(to right, #1D5371,#185C53);
 }
+form label{
+    padding-left: 110px;
+}
+/*departamento*/
+#modalCrearDepto input[type="text"], #modalEditarDepto input[type="text"]{
+    border: 0;
+    margin: 20px;
+    width: 65%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+#modalCrearDepto select, #modalEditarDepto select{
+    border: 1px solid #ced0d0;
+    margin: 20px 70px;
+    width: 45%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+/*empleado*/
+#modalCrearEmpleado input[type="text"], #modalEditarEmpleado input[type="text"]{
+    margin: 20px 40px;
+    padding: 0 10px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="password"], #modalCrearEmpleado input[type="password"]{
+    padding: 0 10px;
+    margin: 30px 95px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="number"], #modalCrearEmpleado input[type="number"]{
+    padding: 0 10px;
+    margin: 30px 10px;
+    width: 50%;
+}
+#modalEditarEmpleado input[type="date"], #modalCrearEmpleado input[type="date"]{
+    padding: 0 10px;
+    margin: 30px 25px;
+    width: 50%;
+}
+#modalEditarEmpleado select, #modalCrearEmpleado select{
+    border: 0;
+    margin: 20px 70px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+ 
+ 
+/*crear minuta*/
 form label {
     display: block;
     font-weight: bold;
     margin-top: 30px;
     color: #11384d;
 }
+ 
 textarea {
     width: 80%;
     height: 80px;
@@ -496,7 +537,7 @@ textarea {
     padding: 10px;
     border: 1px solid #ced0d0;
 }
-
+ 
 input[type="search"] {
     width: 60%;
     padding: 5px;
@@ -504,59 +545,13 @@ input[type="search"] {
     border: 1px solid #ced0d0;
     border-radius: 5px;
 }
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 10vh;
-        left: -100%;
-        width: 40%;
-       
-    }
-    .sidebar.active {
-        left: 0;
-        width: 40%;
-    }
-    main {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    .minutas-list {
-        transition: all 0.2s;
-        min-width: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        height: 100%;
-
-    }
-    .minutas{
-        height: 100%;
-    }
-    .minutas-list.inactive {
-        width: 0;
-        min-width: 0;
-    }
-
-    .minuta-content {
-        min-width: 100%;
-        width: 100%;
-        padding: 0px;
-        margin-top: 20px;
-        
-    }
-    .modal form{
-
-        width: 90%;
-    }
-    .modal form div{
-        width: 100%;
-    }
-  
+#modalCrearMinuta div{
+    width: 100%;
+    height: 7vh;
 }
-
+.borde{
+    width: 100%;
+    height: 30px;
+    align-content: center;
+    border: 1px solid #0f3833;
+}
