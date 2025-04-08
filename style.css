@@ -82,7 +82,7 @@ header {
     width: 0px;
     padding: 0px;
     border-radius: 5px 0 0 5px ;
-
+    color: transparent  ;
 }
 
 header.buscar #titulo{
@@ -100,7 +100,19 @@ header.buscar #seccion{
 
 header.buscar #seccion input{
  width: 50VW;
+ background-color: white;
+ color: #185C53;
+    padding-left: 10px;
+    border: 1px solid #185C53;
 }
+#seccion input::placeholder{
+    color: white;
+}
+#seccion input:focus{
+    border: none;
+    outline: none;
+}
+
 header.buscar #seccion #buscar{
     transition: all 0s;
     transition-delay: 0s;

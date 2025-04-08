@@ -19,7 +19,7 @@
             </div>
         </div>
         <div id="seccion">
-            <input type="search" placeholder="">
+            <input type="search"  placeholder="">
             <i id="buscar" class="material-icons">search</i>
             <i class="material-icons">note_add</i>
         </div>
@@ -339,8 +339,12 @@
         const menu = document.querySelector('.menu');
         const sidebar = document.querySelector('.sidebar');
         const header =document.querySelector("header");
+        const buscar = document.querySelector("#seccion input[type=search]");
  
         document.querySelector("#buscar").addEventListener("click",function (){
+            buscar.click();
+            buscar.focus();
+            
             console.log("sdfgh");
             header.classList.toggle("buscar");
         })
@@ -408,6 +412,9 @@
  
                 }
             }
+           
+
+
         });
  
  
