@@ -15,14 +15,13 @@
             </button>
             <img src="logotec (weld).png">
             <div> <h1>MINUTAS</h1>
-            <p>Luis Carlos Longares Vidal</p>
+            <p>Luis Carlos Esteban Longares Vidal</p>
             </div>
         </div>
         <div id="seccion">
             <input type="search" placeholder="">
             <i id="buscar" class="material-icons">search</i>
-            <i id="crearMinutaBtn" class="material-icons" >note_add</i>
-
+            <i class="material-icons">note_add</i>
         </div>
  
        
@@ -31,13 +30,10 @@
     </header>
     <div class="content">
         <aside class="sidebar">
-            <a id="apartado-minutas" href="index.html">Minutas</a>
-            <a id="apartado-empleados" href="Empleados.html">Empleados</a>
-            <a id="apartado-departamentos" href="departamento.html">Departamentos</a>
-            <a id="apartado-configuracion" href="configuracion.html">Configuracion</a>
-            <a id="apartado-perfil" href="perfil.html">Perfil</a>
+                <a id="apartado-minutas" href="indexEmpleado.html">Minutas</a>
+                <a id="apartado-configuracion" href="configuracionEmpleado.html">Configuracion</a>
+                <a id="apartado-perfil" href="empleadoPerfil.html">Perfil</a>
  
-     
         </aside>
         <main>
            <!-- <input type="button"  class="float-btn hover" value="Crear minuta">-->
@@ -53,32 +49,31 @@
  
                         <button id="btnfiltros">Filter</button>
  
- 
                 </div>
                 <div class="filtrar">
-                    <form>
+                        <form>
                           
-                        <label>Departamento:</label>
-                        <select>
-                            <option>Sistemas</option>
-                            <option>Vinculación</option>
-                            <option>Planeación</option>
-                            <option>Administración</option>
-                            <option>Industrial</option>
-                            <option>Coordinación</option>
-                        </select>
-                        <label>Empleados:</label>
-                        <select>
-                            <option>Oscar</option>
-                            <option>Adriana</option>
-                            <option>Ernestina</option>
-                            <option>Hector</option>
-                        </select>
-                        <label>Desde:</label>
-                        <input type="date">
-                        <label>Hasta:</label>
-                        <input type="date">
-                    </form>
+                            <label>Departamento:</label>
+                            <select disabled>
+                                <option>Sistemas</option>
+                                <option>Vinculación</option>
+                                <option>Planeación</option>
+                                <option>Administración</option>
+                                <option>Industrial</option>
+                                <option>Coordinación</option>
+                            </select>
+                            <label>Empleados:</label>
+                            <select disabled>
+                                <option>Oscar</option>
+                                <option>Adriana</option>
+                                <option>Ernestina</option>
+                                <option>Hector</option>
+                            </select>
+                            <label>Desde:</label>
+                            <input type="date">
+                            <label>Hasta:</label>
+                            <input type="date">
+                        </form>
                 </div>
                 <div class="minutas">
 
@@ -283,9 +278,24 @@
                             <th>Firma</th>
                             <th>Nombre</th>
                             <th>Firma</th>
-                            <td>
-                                <tr></tr>
-                            </td>
+                            <tr>
+                                <td>Oscar</td>
+                                <td></td>
+                                <td>Adriana</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Ernestina</td>
+                                <td></td>
+                                <td>Hector</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </table>
  
  
@@ -344,9 +354,10 @@
                     
                 </form>
             </div>
-           
-            <!--editar minuta-->
-            <div id="modalEditarMinuta" class="modal">
+
+
+             <!--editar minuta-->
+             <div id="modalEditarMinuta" class="modal">
                 <form>
                     <h3>Editar Minuta</h3>
                     <label>Objetivo</label>
@@ -391,18 +402,16 @@
                     </div>
                     
                 </form>
-            </div>
-
-
-             <!--Eliminar empleado-->
-        <div id="modalEliminarMinuta" class="modal">
-            <form class="botonesForm">
-                <label>¿Desea eliminar esta Minuta?</label><br>
-                <input type="button" value="Si">
-                <input type="button" value="No">
-            </form>
-        </div>
-
+             </div>
+                 <!--Eliminar empleado-->
+                <div id="modalEliminarMinuta" class="modal">
+                    <form class="botonesForm">
+                        <label>¿Desea eliminar esta Minuta?</label><br>
+                        <input type="button" value="Si">
+                        <input type="button" value="No">
+                    </form>
+                </div>
+           
         </main>
    
     </div>
@@ -410,31 +419,11 @@
         const menu = document.querySelector('.menu');
         const sidebar = document.querySelector('.sidebar');
         const header =document.querySelector("header");
-
-
-
-
-
-
-        document.querySelector("#crearMinutaBtn").addEventListener("click",function(){
-            console.log("ss");
-            document.querySelector("#modalCrearMinuta").classList.toggle("active");
-        
+ 
+        document.querySelector("#buscar").addEventListener("click",function (){
+            console.log("sdfgh");
+            header.classList.toggle("buscar");
         })
-
-
-
-        const buscar = document.querySelector("#seccion input[type=search]");
- 
- document.querySelector("#buscar").addEventListener("click",function (){
-     buscar.click();
-     buscar.focus();
-     
-     console.log("sdfgh");
-     header.classList.toggle("buscar");
- })
- 
-      
         //Sidebar
         menu.addEventListener('click', () => {
             sidebar.classList.toggle('active');
@@ -546,40 +535,6 @@
             filtrar.classList.toggle("active");
         });
 
-//asasas
-/*
- 
-                id="apartado-minutas"
-               id="apartado-empleados"
-                id="apartado-departamentos"
-*/
- /*   const min = document.querySelector("#apartado-minutas");
-    const emp = document.querySelector("#apartado-empleados");
-    const dep = document.querySelector("#apartado-departamentos");
- 
-        min.addEventListener("click", function () {
-            actualizarIconos(0);
-        });
-        emp.addEventListener("click", function () {
-            actualizarIconos(1);
-        });
-        dep.addEventListener("click", function () {
-            actualizarIconos(2);
-    });
-    function actualizarIconos(activo) {
-    const iconos = document.querySelectorAll("#seccion div a i.material-icons");
- 
-    iconos.forEach((icono, index) => {
-        if (index === activo) {
-            icono.style.display = "inline-block";
-        } else {
-            icono.style.display = "none";
-        }
-    });
-}*/
- 
- 
- 
     </script>
 </body>
 </html>

@@ -42,7 +42,7 @@ header {
     align-items: center;
     gap: 5px;
     background: linear-gradient(to right, #1D5371,#185C53);
-    clip-path: polygon(0 0, 100% 0, calc(100% - 10vh) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
 }
 #titulo img{
     width: 5vh;
@@ -82,7 +82,7 @@ header {
     width: 0px;
     padding: 0px;
     border-radius: 5px 0 0 5px ;
-
+    color: transparent  ;
 }
 
 header.buscar #titulo{
@@ -100,7 +100,19 @@ header.buscar #seccion{
 
 header.buscar #seccion input{
  width: 50VW;
+ background-color: white;
+ color: #185C53;
+    padding-left: 10px;
+    border: 1px solid #185C53;
 }
+#seccion input::placeholder{
+    color: white;
+}
+#seccion input:focus{
+    border: none;
+    outline: none;
+}
+
 header.buscar #seccion #buscar{
     transition: all 0s;
     transition-delay: 0s;
@@ -122,10 +134,6 @@ header.buscar #seccion #buscar{
     align-content: center;
     margin-right: 10px;
     border-radius: 25%;
-}
-
-#seccion div{
-
 }
 
 .menu{
@@ -232,9 +240,9 @@ main {
     overflow-y: hidden;
 
 }
-
+/*MODIFICADO*/
 .filtrar.active{
-    height: 220px;
+    height: 370px;
 }
 .filtrar form{
     transition: all 1s;
@@ -249,16 +257,6 @@ main {
 #btnfiltros.active{
     background-color: #185C53;
 }
-
-
-
-
-
-
-
-
-
-
 .minuta-content {
     width: 60%;
     background-color: white;
@@ -272,10 +270,13 @@ main {
     color: #333;
     margin: 20px auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+
+
+
 }
 .minuta-content h1{
     text-align: center;
- 
+    padding: 30px;
     color: #222;
 }
 .minuta-content b{
@@ -287,7 +288,18 @@ main {
 .minuta-content ul{
     margin-left: 40px;
 }
-
+/*CONFIG DE ENCABEZADOOO*/
+.minuta-content img{
+    width: 100%;
+    margin: 0 auto;
+}
+.minuta-content img:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+#minuta-config{
+    width: 50vw;
+}
 /*tabla*/
 table {
     background-color: #D9D9D9;
@@ -381,12 +393,15 @@ table {
     height: 90vh;
     background-color: rgba(135, 133, 133, 0.516);
     overflow-y: auto;
+    display: flex;
+    justify-items: center;
+    padding: 0px;
 }
 /*modales, div para eliminar*/
 .modal form{
+    margin: 5vh auto 15vh auto;
     width: 80%;
     height: auto;
-    margin: 50px auto;
     justify-content: center;
     background-color: white;
     position: relative;
@@ -396,13 +411,8 @@ table {
 
 }
 .modal form div{
-    min-width: 300px;
-    width: 30%;
 }
 .modal form div.buttons {
-    max-width: none;
-    min-width: none;
-    width: 80%;
 }
 
 
@@ -426,18 +436,17 @@ form label{
 
 /*Empleado*/
 #modalCrearEmpleado{
-    display: block;
-    display: block;
+    display: none;
 }
 #modalEditarEmpleado{
     display: none;
 }
 #modalEliminarEmpleado{
-    display: none;  
+    display: none; 
 }
 /*Departamento*/
 #modalCrearDepto{
-    display: none;
+    display: block;
 }
 #modalEditarDepto{
     display: none;
@@ -448,37 +457,71 @@ form label{
 #modalCrearMinuta{
     display: none;
 }
-/*eliminar empleado*/
+#modalEditarMinuta{
+    display: none;
+}
+#modalEliminarMinuta{
+    display: none;
+}
 
+
+#modalCrearMinuta.active{
+    display: block;
+}
+
+#modalCrearMiuta input.material-icons{
+   
+}
+
+
+
+/*eliminar selo agg jejej*/
+.botonesForm{
+    border-radius: 10px;
+}
+.botonesForm label{
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    text-align: center;
+}
+.botonesForm input{
+    width: 20vw;
+    margin: 20px auto;
+    background-color: #185C53;
+    color: white;
+}
 .buttons{
     width: 80%;
-    margin-left: 10%;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 20px;
-    padding: 10px;
-}
+    padding-bottom: 10px;}
 
 .buttons input[type="button"]{
     background-color: #185C53;
     color: white;
     border: none;
     border-radius: 5px;
+    width: 30%;
     cursor: pointer;
-    margin: auto 0px;
-    width: 200px;
+    margin: 0 0px;
+    max-width: 200px;
     padding: 7px;
 }
+
+
 /*titulo en los modales*/
 form h3{
     text-align: center;
     padding: 20px 0 20px 0;
     width: 100%;
     color: white;
-    height: 10vh;
+    height: 7vh;
     background: linear-gradient(to right, #1D5371,#185C53);
 }
 form label {
@@ -508,6 +551,102 @@ input[type="search"] {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#perfil{
+    width: 100%;
+    padding: vh 10vw;
+}
+#perfil h3{
+    padding: 3vh 10vw;
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    background: none;
+    color: #11384d;
+    box-shadow: 0px 3px 5px #bbbbbb;
+}
+ a{
+    text-decoration: none;
+    color: #11384d;
+}
+#perfil [type="button"]{
+    background-color:darkred;
+    color: white;
+    width: auto;
+    margin-top: 5vh;
+}
+
+/*crearminuta*/
+#verMinuta{
+    background-color: #11384d;
+    width: 100vw;
+}
+#modalCrearMinuta form, #modalEditarMinuta form{
+    height: auto;
+    display: block;
+}
+form li{
+    margin: 2vh 10vw;
+    color: #333;
+    font-size: 14px;
+    list-style:none;
+    border-bottom: #bbbbbb 1px solid;
+}
+#modalCrearMinuta div, #modalEditarMinuta div{
+    display: flex;
+    margin-top: 15px;
+    width: 96%;
+}
+#modalCrearMinuta input[class="material-icons"],#modalEditarMinuta input[class="material-icons"]{
+    background-color: #11384d;
+    width: 5vh;
+text-align: center;
+padding: 0;
+    height: 5vh;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#modalCrearMinuta .buttons, #modalEditarMinuta .buttons{
+    width: 80%;
+}
+/* fieldset{
+    width: auto;
+    margin: 5vh 8vw;
+    border: #11384d 1px solid;
+    padding-left: 15px;
+    height: auto;
+}
+legend{
+    padding: 0 10px;
+    color: #11384d;
+    font-weight: bold;
+} */
 
 
 
@@ -544,6 +683,7 @@ input[type="search"] {
     }
 
     .minuta-content {
+        
         min-width: 100%;
         width: 100%;
         padding: 0px;
@@ -556,7 +696,10 @@ input[type="search"] {
     }
     .modal form div{
         width: 100%;
+        
     }
-  
+    .buttons{
+        
+    }
 }
 

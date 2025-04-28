@@ -30,14 +30,13 @@
     </header>
     <div class="content">
         <aside class="sidebar"> 
-            <ul>
-                <a href="index.html"><li>Minutas</li></a>
-                <a href="Empleados.html"><li>Empleados</li></a>
-                <a href="departamento.html"><li>Departamentos</li></a>
                 
-            </ul>
-      
-        </aside>
+            <a id="apartado-minutas" href="index.html">Minutas</a>
+            <a id="apartado-empleados" href="Empleados.html">Empleados</a>
+            <a id="apartado-departamentos" href="departamento.html">Departamentos</a>
+            <a id="apartado-configuracion" href="configuracion.html">Configuracion</a>
+            <a id="apartado-perfil" href="perfil.html">Perfil</a>
+            </aside>
        <main>
         <table id="tablaEmplea">
             <tr>
@@ -114,10 +113,10 @@
 
         <!--Eliminar empleado-->
         <div id="modalEliminarEmpleado" class="modal">
-            <form>
+            <form class="botonesForm">
                 <label>¿Desea eliminar a este empleado?</label><br>
-                <input class="hover" type="button" value="Si">
-                <input class="hover" type="button" value="No">
+                <input type="button" value="Si">
+                <input type="button" value="No">
             </form>
         </div>
 
@@ -195,8 +194,8 @@
                 <label>Fecha de Nacimiento</label>
                 <input type="date"><br>
                 <div class="buttons">
-                <input class="hover" type="button" value="Cancelar">
-                <input class="hover" type="button" value="Confirmar">
+                    <input class="hover" type="button" value="Cancelar">
+                    <input class="hover" type="button" value="Confirmar">
                 </div>
             </form>
         </div>
